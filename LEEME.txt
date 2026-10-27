@@ -1,0 +1,23 @@
+BODEGA DE PRODUCTOS - Java Web (Maven + Tomcat 9 + MySQL)
+
+REQUISITOS
+- JDK 8 o superior
+- Maven 3.6 o superior
+- Apache Tomcat 9 (javax.servlet)
+- MySQL 8
+
+PASOS
+1. Ejecutar el script sql/bodega.sql en MySQL (crea la base bodega_db, la tabla productos y datos de prueba).
+2. Revisar usuario y clave de MySQL en src/main/resources/db.properties
+   (también se pueden definir las variables de entorno BODEGA_DB_URL, BODEGA_DB_USUARIO y BODEGA_DB_CLAVE).
+3. Generar el WAR:  mvn clean package
+4. Copiar target/bodega.war a la carpeta webapps de Tomcat 9 e iniciar el servidor.
+5. Abrir en el navegador: http://localhost:8080/bodega/
+
+ESTRUCTURA
+- Conexion/conexion.java           Conexión JDBC con DriverManager
+- Modelo/Producto.java             POJO del producto
+- DAO/ProductoDAO.java             Consultas SQL (listar, buscar, insertar, actualizar, eliminar)
+- Servicios/ProductoServelet.java  Capa de servicio que delega al DAO
+- Controller/Api.java              Servlet /api/productos (GET listar/buscar, POST guardar/editar/eliminar)
+- webapp/index.html, css, js       Interfaz web
