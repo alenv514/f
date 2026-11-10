@@ -1,0 +1,5 @@
+INSTALACION (XAMPP/WAMP)
+1. Importar banco.sql en phpMyAdmin (crea la base banco_db con datos de prueba).
+2. Copiar la carpeta "banco" a htdocs.
+3. Si tu MySQL tiene clave, editarla en banco/conexion.php.
+4. Abrir http://localhost/banco/

@@ -1,0 +1,12 @@
+body { font-family: Arial, sans-serif; max-width: 700px; margin: 30px auto; }
+label { display: block; margin-top: 10px; }
+select, input { padding: 6px; width: 100%; box-sizing: border-box; }
+button { margin-top: 12px; padding: 8px 16px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #999; padding: 6px; text-align: left; }
+th { background: #eee; }
+.msg { padding: 10px; border-radius: 4px; }
+.ok { background: #d4edda; }
+.error { background: #f8d7da; }
+.dep { color: green; font-weight: bold; }
+.ret { color: red; font-weight: bold; }
